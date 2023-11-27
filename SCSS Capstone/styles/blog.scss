@@ -1,0 +1,81 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.page-container {
+  .pink-hero-container {
+    width: 100%;
+    height: 400px;
+    background-color: #b22281;
+    color: white;
+    font-size: 32px;
+    margin: 0px;
+    @include flex-center;
+  }
+
+  .pink-main-content-container {
+    @include main-container;
+    height: 100%;
+    align-items: flex-start;
+    padding: 120px;
+    padding-top: 100px;
+    gap: 80px;
+
+    .blog-content-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+      font-size: 15px;
+
+      .blog-title1 {
+        color: #973da7;
+      }
+
+      .blog-title2 {
+        color: #01bcd4;
+      }
+
+      .blog-title3 {
+        color: #f5544a;
+      }
+
+      .blog-title4 {
+        color: #ffbf71;
+      }
+
+      .blog-title5 {
+        color: #eb306e;
+      }
+
+      .blog-title6 {
+        color: #95d098;
+      }
+
+      .blog-title7 {
+        color: #89229b;
+      }
+
+      .blog-content-bold {
+        color: $darkerblue;
+        font-size: 26px;
+        font-weight: 800;
+      }
+
+      .blog-content-words {
+        color: $textgrey;
+
+        a {
+          color: $lightblue;
+        }
+      }
+
+      .blog-source {
+        color: $darkerblue;
+        a {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}

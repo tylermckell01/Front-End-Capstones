@@ -1,0 +1,32 @@
+body,
+html {
+  margin: 0px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: $backgroundcolor;
+  scroll-behavior: smooth;
+}
+
+.active {
+  color: $pagepink;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.6s;
+}
+
+.info-text,
+.pink-hero-container,
+.blog-content-wrapper {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.info-title,
+.message-title,
+.blog-content-bold,
+.hero-container,
+.main-content-container {
+  font-family: sans-serif;
+}

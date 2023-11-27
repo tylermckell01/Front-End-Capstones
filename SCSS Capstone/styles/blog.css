@@ -1,0 +1,72 @@
+.page-container .pink-hero-container {
+  width: 100%;
+  height: 400px;
+  background-color: #b22281;
+  color: white;
+  font-size: 32px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-container .pink-main-content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -60px 30px 0px;
+  padding-top: 30px;
+  background-color: white;
+  border-radius: 5px;
+  height: 100%;
+  align-items: flex-start;
+  padding: 120px;
+  padding-top: 100px;
+  gap: 80px;
+}
+.page-container .pink-main-content-container .blog-content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 15px;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-title1 {
+  color: #973da7;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-title2 {
+  color: #01bcd4;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-title3 {
+  color: #f5544a;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-title4 {
+  color: #ffbf71;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-title5 {
+  color: #eb306e;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-title6 {
+  color: #95d098;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-title7 {
+  color: #89229b;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-content-bold {
+  color: #1d2944;
+  font-size: 26px;
+  font-weight: 800;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-content-words {
+  color: #5a5a5a;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-content-words a {
+  color: #4e7395;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-source {
+  color: #1d2944;
+}
+.page-container .pink-main-content-container .blog-content-wrapper .blog-source a {
+  font-weight: 800;
+}/*# sourceMappingURL=blog.css.map */

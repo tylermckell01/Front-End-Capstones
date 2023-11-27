@@ -1,0 +1,16 @@
+@media (max-width: 750px) {
+  .page-container .header-container {
+    font-size: 16px;
+  }
+}
+@media (max-width: 970px) {
+  .page-container .main-content-container .uncategorized-container {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: smooth;
+  }
+}/*# sourceMappingURL=landing-query.css.map */

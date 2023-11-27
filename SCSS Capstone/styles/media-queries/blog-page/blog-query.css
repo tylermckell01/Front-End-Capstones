@@ -1,0 +1,8 @@
+@media (max-width: 575px) {
+  .page-container .header-container .left-header {
+    margin-left: 20px;
+  }
+  .page-container .header-container .right-header {
+    width: 50%;
+  }
+}/*# sourceMappingURL=blog-query.css.map */

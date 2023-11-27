@@ -1,0 +1,357 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.page-container {
+  width: 100%;
+  height: 100%;
+
+  .header-container {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: $textgrey;
+    font-family: "Courier New", Courier, monospace;
+    position: sticky;
+    top: 0;
+    // font-size: 1.8vw;
+
+    .left-header {
+      width: 13%;
+      height: 100%;
+      @include flex-center;
+      justify-content: center;
+      font-size: 130%;
+
+      .button-left-header {
+        &:hover {
+          cursor: pointer;
+          color: #7a7a7a;
+        }
+      }
+    }
+
+    .right-header {
+      width: 36%;
+      height: 100%;
+      @include flex-center;
+
+      .buttons-right-header {
+        width: 400px;
+        height: 100%;
+        @include flex-center;
+        justify-content: space-around;
+        font-size: 80%;
+        font-weight: 500;
+
+        .button-type1 {
+          &:hover {
+            color: $pagepink;
+            cursor: pointer;
+          }
+        }
+
+        .more-button {
+          width: 80px;
+          height: 45px;
+          @include flex-center;
+          background-color: $pagepink;
+          border-radius: 25px;
+          color: white;
+
+          &:hover {
+            @include pink-button-hover;
+          }
+        }
+      }
+    }
+  }
+
+  .background-image {
+    width: 100%;
+    height: 1000px;
+    @include flex-center;
+    background-image: url("https://source.unsplash.com/random/america");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .hero-container {
+      // i will do negative margins here after styling
+      // margin-top: -700px;
+      width: 100%;
+      height: 50%;
+      // border: 1px solid lime;
+      @include flex-center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      .hero-text-wrapper {
+        width: 100%;
+        height: 60%;
+        @include flex-center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        color: white;
+
+        .hero-title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 80px;
+        }
+
+        .hero-words {
+          font-size: 20px;
+        }
+      }
+
+      .hero-button {
+        width: 130px;
+        height: 45px;
+        @include flex-center;
+        background-color: $pagepink;
+        border-radius: 5px;
+        color: white;
+        font-size: 80%;
+      }
+    }
+  }
+
+  .main-content-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
+    margin: -60px 30px 0px;
+    padding-top: 30px;
+    background-color: white;
+    border-radius: 5px;
+
+    .main-content-title {
+      width: 100%;
+      @include flex-center;
+      padding: 10px;
+      font-size: 250%;
+      color: $blueheadercolor;
+      // border: 1px solid orange;
+    }
+
+    .stand-for-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 950px;
+      height: 300px;
+      // padding: 40px 0px;
+      margin: 50px 0px;
+      // border: 1px solid blueviolet;
+
+      .column-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 20px;
+
+        .column-picture1 {
+          width: 100px;
+          height: 100px;
+          background-image: url("../../images/feat1.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .column-picture2 {
+          width: 100px;
+          height: 100px;
+          background-image: url("../../images/feat2.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .column-picture3 {
+          width: 100px;
+          height: 100px;
+          background-image: url("../../images/feat3.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .column-title {
+          color: $blueheadercolor;
+          font-size: 20px;
+          font-weight: 900;
+        }
+
+        .column-words {
+          margin-top: 20px;
+          // height: 100px;
+          @include flex-center;
+          text-align: center;
+          color: $darktextgrey;
+        }
+      }
+    }
+
+    .about-hestia-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 285px;
+      margin: 75px 0px;
+      // border: 1px solid lime;
+      color: white;
+
+      .about-hestia-background-image {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../images/city.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+
+        .hestia-left {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 25px;
+          padding-left: 5%;
+
+          .about-hestia-title {
+            font-size: 250%;
+            font-weight: 500;
+          }
+
+          .about-hestia-words {
+            font-size: 125%;
+          }
+        }
+
+        .hestia-right {
+          width: 50%;
+          height: 100%;
+          @include flex-center;
+
+          .about-hestia-image {
+            width: 400px;
+            height: 285px;
+            @include flex-center;
+            background-image: url("../../images/about-content.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+      }
+    }
+
+    .uncategorized-container {
+      display: flex;
+      width: 900px;
+      height: 300px;
+      margin: 75px 0px;
+      // border: 1px solid purple;
+
+      .uncategorized-content-wrapper {
+        // height: 100%;
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+
+        .uncategorized-title1 {
+          color: #973da7;
+        }
+
+        .uncategorized-title2 {
+          color: #01bcd4;
+        }
+
+        .uncategorized-title3 {
+          color: #f5544a;
+        }
+
+        .uncategorized-content-bold {
+          font-size: 18px;
+          color: $darkerblue;
+          font-weight: 800;
+        }
+
+        .uncategorized-content-words {
+          color: $textgrey;
+        }
+      }
+    }
+
+    .get-in-touch-container {
+      width: 100%;
+      height: 400px;
+      // padding: 0px 0px 10px;
+      // border: 1px solid blue;
+      color: white;
+
+      .get-in-touch-background-image {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        background-image: url("../../images/city.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .get-in-touch-title {
+          font-size: 35px;
+          padding-left: 40px;
+          justify-self: flex-start;
+        }
+
+        .get-in-touch-heading {
+          font-size: 20px;
+          padding-left: 40px;
+
+          i {
+            font-size: 35px;
+          }
+        }
+
+        .get-in-touch-words {
+          // color: $textgrey;
+          margin-top: -40px;
+          padding-left: 70px;
+        }
+      }
+    }
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+    height: 100px;
+    font-size: 13px;
+    background-color: $footercolor;
+    color: white;
+
+    .left-footer {
+      width: 200px;
+      display: flex;
+      gap: 20px;
+      text-decoration: none;
+    }
+  }
+}
