@@ -1,5 +1,14 @@
-@import "./common/common.scss";
 @import "./common/variables.scss";
 @import "./common/mixins.scss";
+@import "./common/common.scss";
 
 @import "./navigation/header.scss";
+@import "./navigation/footer.scss";
+
+@import "./pages/about.scss";
+@import "./pages/contact.scss";
+@import "./pages/home.scss";
+@import "./pages/mycart.scss";
+@import "./pages/products.scss";
+
+@import "./custom-components/productcard.scss";

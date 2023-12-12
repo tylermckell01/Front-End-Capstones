@@ -1,0 +1,30 @@
+.products-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+
+  // .page-title {
+  //   font-size: 46px;
+  //   border: 1px solid black;
+  //   margin-bottom: 25px;
+  // }
+
+  .products-page-search {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 25px;
+    background-color: $lightest-grey;
+  }
+
+  .cards-wrapper {
+    width: 1500px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    gap: 10px;
+  }
+}

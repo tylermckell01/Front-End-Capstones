@@ -1,0 +1,26 @@
+.about-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  .info-wrapper {
+    background-color: $light-purple;
+    width: 700px;
+    height: 150px;
+    padding-left: 10px;
+    border-radius: 10px;
+
+    // h3 {
+    // }
+
+    p {
+      padding-left: 20px;
+    }
+  }
+
+  .page-title {
+    text-align: center;
+    margin-top: 25px;
+  }
+}
