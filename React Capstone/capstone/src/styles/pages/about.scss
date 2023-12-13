@@ -7,16 +7,18 @@
   .info-wrapper {
     background-color: $light-blue;
     width: 700px;
-    height: 150px;
+    height: fit-content;
     padding-left: 10px;
     border: 1px solid $dark-grey;
     border-radius: 10px;
 
-    // h3 {
-    // }
-
     p {
       padding-left: 20px;
+      padding-right: 25px;
+    }
+
+    li {
+      padding-right: 25px;
     }
   }
 

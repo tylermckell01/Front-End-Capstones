@@ -7,12 +7,16 @@ import { useCartContext } from "../context/CartContext";
 export default function ProductCard(props) {
   const { yourCart, handleSetCart } = useCartContext();
   const [isDisabled, setIsDisabled] = useState(false);
+  const [quantity, setQuantity] = useState(true);
 
-  // useEffect(() => {
-  //   if (yourCart.includes(props.productInfo)) {
-  //     setIsDisabled(true);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (props.productInfo.quantity < 1) {
+      setQuantity(false);
+      // console.log(props.productInfo.quantity);
+    } else {
+      setQuantity(true);
+    }
+  }, [props.productInfo.quantity]);
 
   function addToCartButton() {
     handleSetCart((prev) => [...prev, props.productInfo]);
@@ -24,6 +28,21 @@ export default function ProductCard(props) {
       return cartItem.id !== idToRemove;
     });
     handleSetCart(updatedArray);
+  }
+
+  function handleUpdateCart(negative) {
+    let newArray = [...yourCart];
+
+    if (negative) {
+      newArray[props.indexToIncrement].quantity =
+        newArray[props.indexToIncrement].quantity - 1;
+    } else {
+      newArray[props.indexToIncrement].quantity =
+        newArray[props.indexToIncrement].quantity + 1;
+    }
+
+    handleSetCart(newArray);
+    // console.log(yourCart);
   }
 
   return (
@@ -61,38 +80,16 @@ export default function ProductCard(props) {
           </button>
         ) : (
           <div className="cart-buttons">
-            <button
-              onClick={() =>
-                handleSetCart((prevState) => [
-                  {
-                    ...prevState[props?.indexToIncrement],
-                    quantity: prevState[props?.indexToIncrement].quantity - 1,
-                  },
-                ])
-              }
-            >
-              - 1
-            </button>
+            <button onClick={() => handleUpdateCart(true)}>- 1</button>
             <button
               className="remove-product-button"
               onClick={() => removeFromCartButton(props.productInfo.id)}
             >
               remove from cart
             </button>
-            <button
-              onClick={() =>
-                handleSetCart((prevState) => [
-                  {
-                    ...prevState[props?.indexToIncrement],
-                    quantity: prevState[props?.indexToIncrement].quantity + 1,
-                  },
-                ])
-              }
-            >
-              + 1
-            </button>
+            <button onClick={() => handleUpdateCart()}>+ 1</button>
             <br />
-            {props.productInfo.quantity > 0
+            {quantity
               ? `Current Quantity: ${props.productInfo.quantity}`
               : "0 in your cart, please add or remove"}
           </div>

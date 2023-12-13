@@ -30,7 +30,6 @@
 
     .checkout-message {
       text-align: center;
-      // letter-spacing: 1px;
     }
   }
 
@@ -39,10 +38,11 @@
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 30px;
     margin-bottom: 100px;
-    // gap: 10px;
   }
+
   .product-cards-container {
     .individual-cacr-wrapper {
       .card-img {

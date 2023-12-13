@@ -8,11 +8,11 @@ export default function MyCart(props) {
   const [checkoutMessage, setCheckoutMessage] = useState(false);
 
   const subTotal = yourCart.reduce((acc, cartitem) => {
-    return cartitem.price * cartitem.quantity;
+    return acc + cartitem.price * cartitem.quantity;
   }, 0);
 
   const shippingCost = yourCart.reduce((acc, cartitem) => {
-    return cartitem.quantity * 3;
+    return acc + cartitem.quantity * 3;
   }, 0);
 
   const totalPrice = subTotal + shippingCost;
@@ -25,8 +25,9 @@ export default function MyCart(props) {
     return (
       <div className="checkout-message">
         {" "}
-        {totalPrice} has been charged to your account... <br /> <br /> $
-        {subTotal} for your items and ${shippingCost} for shipping
+        ${totalPrice.toFixed(2)} has been charged to your account... <br />{" "}
+        <br /> ${subTotal.toFixed(2)} for your items and $
+        {shippingCost.toFixed(2)} for shipping
       </div>
     );
   }
@@ -37,7 +38,7 @@ export default function MyCart(props) {
 
       <div className="total-cost">
         {totalPrice > 1
-          ? `Your current total is: $${totalPrice}`
+          ? `Your current total is: $${totalPrice.toFixed(2)}`
           : "Your current total is: $0"}
         <button onClick={() => setCheckoutMessage(true)}>Checkout</button>
         <div>{checkoutMessage ? checkoutButton() : ""}</div>

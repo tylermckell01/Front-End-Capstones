@@ -9,15 +9,11 @@
     color: black;
   }
 
-  // color: green;
-  // font-size: larger;
-
   .filter-container {
     margin: 10px 0px 20px 0px;
     display: flex;
     justify-content: center;
     width: 300px;
-    // width: fit-content;
   }
 
   .cards-wrapper {
@@ -25,7 +21,8 @@
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 30px;
     margin-bottom: 100px;
   }
 }

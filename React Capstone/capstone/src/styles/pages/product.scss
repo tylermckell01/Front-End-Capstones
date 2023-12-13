@@ -1,0 +1,33 @@
+.product-page-container {
+  padding-top: 50px;
+  .product-cards-container {
+    display: flex;
+    justify-content: center;
+
+    .individual-card-wrapper {
+      width: 70vw;
+      height: 700px;
+      margin: 20px;
+      gap: 15px;
+      padding-top: 95px;
+
+      img {
+        width: 300px;
+        height: auto;
+        border: 10px solid $light-grey;
+        border-radius: 5px;
+        padding-top: 0;
+      }
+
+      div {
+        font-size: 20px;
+        width: 60%;
+        height: fit-content;
+      }
+
+      .card-title {
+        font-size: 30px;
+      }
+    }
+  }
+}
