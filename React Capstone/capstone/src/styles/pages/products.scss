@@ -5,26 +5,27 @@
   align-items: center;
   padding-top: 60px;
 
-  // .page-title {
-  //   font-size: 46px;
-  //   border: 1px solid black;
-  //   margin-bottom: 25px;
-  // }
+  .page-title {
+    color: black;
+  }
 
-  .products-page-search {
-    width: 200px;
-    height: 30px;
-    margin-bottom: 25px;
-    background-color: $lightest-grey;
+  // color: green;
+  // font-size: larger;
+
+  .filter-container {
+    margin: 10px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    // width: fit-content;
   }
 
   .cards-wrapper {
-    width: 1500px;
+    width: 95%;
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 100px;
-    gap: 10px;
   }
 }

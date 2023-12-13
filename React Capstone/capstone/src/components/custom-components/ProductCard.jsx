@@ -71,7 +71,7 @@ export default function ProductCard(props) {
                 ])
               }
             >
-              - 1 quantity
+              - 1
             </button>
             <button
               className="remove-product-button"
@@ -89,8 +89,9 @@ export default function ProductCard(props) {
                 ])
               }
             >
-              + 1 quantity
+              + 1
             </button>
+            <br />
             {props.productInfo.quantity > 0
               ? `Current Quantity: ${props.productInfo.quantity}`
               : "0 in your cart, please add or remove"}

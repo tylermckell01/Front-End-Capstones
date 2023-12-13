@@ -1,0 +1,55 @@
+.mycart-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+
+  .total-cost {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $light-grey;
+    gap: 10px;
+
+    button {
+      width: 50%;
+      height: 40px;
+      border-radius: 10px;
+      border: 2px solid $light-blue;
+
+      &:hover {
+        background-color: $light-blue;
+        border: 1px solid $cream;
+      }
+    }
+
+    .checkout-message {
+      text-align: center;
+      // letter-spacing: 1px;
+    }
+  }
+
+  .cards-wrapper {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    // gap: 10px;
+  }
+  .product-cards-container {
+    .individual-cacr-wrapper {
+      .card-img {
+        width: 95%;
+        height: 42%;
+        padding-top: 15px;
+      }
+    }
+  }
+}

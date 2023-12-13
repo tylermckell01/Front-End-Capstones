@@ -23,10 +23,10 @@ export default function MyCart(props) {
 
   function checkoutButton() {
     return (
-      <div>
+      <div className="checkout-message">
         {" "}
-        Nice purchase! your price breakdown is ${subTotal} for your items and $
-        {shippingCost} for shipping
+        {totalPrice} has been charged to your account... <br /> <br /> $
+        {subTotal} for your items and ${shippingCost} for shipping
       </div>
     );
   }
@@ -35,22 +35,26 @@ export default function MyCart(props) {
     <div className="mycart-page-container">
       {/* {console.log(shippingCost)} */}
 
-      <div>
-        {totalPrice > 1 ? `Your total is: $${totalPrice}` : "Your total is: $0"}
+      <div className="total-cost">
+        {totalPrice > 1
+          ? `Your current total is: $${totalPrice}`
+          : "Your current total is: $0"}
         <button onClick={() => setCheckoutMessage(true)}>Checkout</button>
         <div>{checkoutMessage ? checkoutButton() : ""}</div>
       </div>
-      {yourCart.map((cartproduct, index) => {
-        console.log(index);
-        return (
-          <ProductCard
-            key={cartproduct.id}
-            productInfo={cartproduct}
-            productPage={false}
-            indexToIncrement={index}
-          />
-        );
-      })}
+      <div className="cards-wrapper">
+        {yourCart.map((cartproduct, index) => {
+          console.log(index);
+          return (
+            <ProductCard
+              key={cartproduct.id}
+              productInfo={cartproduct}
+              productPage={false}
+              indexToIncrement={index}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

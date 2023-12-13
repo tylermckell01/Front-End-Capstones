@@ -5,10 +5,11 @@
   gap: 25px;
 
   .info-wrapper {
-    background-color: $light-purple;
+    background-color: $light-blue;
     width: 700px;
     height: 150px;
     padding-left: 10px;
+    border: 1px solid $dark-grey;
     border-radius: 10px;
 
     // h3 {

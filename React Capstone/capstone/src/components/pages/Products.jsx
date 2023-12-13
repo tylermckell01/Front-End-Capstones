@@ -95,18 +95,20 @@ export default function Products(props) {
   return (
     <div className="products-page-container">
       <div className="page-title">Products page</div>
-      <div className="filter">
-        <select
-          name="product-filter"
-          id=""
-          onChange={(e) => setFilter(e.target.value)}
-        >
-          <option value="">No filter</option>
-          <option value="clothing">Clothing</option>
-          <option value="electronics">Electronics</option>
-          <option value="jewelery">Jewelery</option>
-        </select>
-
+      Filters <br />
+      <div className="filter-container">
+        <div className="filter">
+          <select
+            name="product-filter"
+            id=""
+            onChange={(e) => setFilter(e.target.value)}
+          >
+            <option value="">No filter</option>
+            <option value="clothing">Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="jewelery">Jewelery</option>
+          </select>
+        </div>
         <div className="order">
           <select
             name="product-order"

@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
     <div className="footer-container">
-      <div className="address-wrapper">Address</div>
-      <div className="phone-wrapper">Phone #</div>
-      <div className="store-name-wrapper">Store Name</div>
+      <div className="address-wrapper">123 lane Dr</div>
+      <div className="phone-wrapper">Call us! 555-555-5555</div>
+      <div className="store-name-wrapper">Products R us</div>
     </div>
   );
 }

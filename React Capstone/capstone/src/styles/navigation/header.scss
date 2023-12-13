@@ -7,13 +7,34 @@
   background-color: $light-blue;
   font-size: larger;
 
+  // a {
+  //   text-decoration: none;
+  //   font-size: large;
+
+  //   &:hover {
+  //     color: white;
+  //   }
+
+  // }
+
   a {
+    color: #333;
     text-decoration: none;
-    font-size: large;
+    position: relative;
 
-    // .active {
-    //   color: white;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #ff6600;
+      transition: width 0.5s ease;
+    }
 
-    // }
+    &:hover:before {
+      width: 100%;
+    }
   }
 }
