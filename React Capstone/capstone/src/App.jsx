@@ -11,8 +11,6 @@ import MyCart from "./components/pages/MyCart";
 import About from "./components/pages/About";
 
 function App() {
-  // i need to give products.jsx the yourcart and mycart the setyourcart method
-
   return (
     <div className="App">
       <Router>
