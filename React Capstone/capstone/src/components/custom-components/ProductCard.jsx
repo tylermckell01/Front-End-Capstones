@@ -12,7 +12,6 @@ export default function ProductCard(props) {
   useEffect(() => {
     if (props.productInfo.quantity < 1) {
       setQuantity(false);
-      // console.log(props.productInfo.quantity);
     } else {
       setQuantity(true);
     }
@@ -42,14 +41,10 @@ export default function ProductCard(props) {
     }
 
     handleSetCart(newArray);
-    // console.log(yourCart);
   }
 
   return (
     <div className="product-cards-container">
-      {console.log(yourCart)}
-      {console.log(props.indexToIncrement)}
-
       <div className="individual-card-wrapper">
         <img alt="pic" src={props.productInfo?.image} className="card-image" />
         <div className="card-title">

@@ -43,7 +43,6 @@ export default function Products(props) {
       });
     } else if (orderedProducts === "alphabetical (a-z)") {
       const ordered = sortProductAlphabetical(productInfo);
-      console.log(ordered);
       return ordered.map((info) => {
         return (
           <ProductCard key={info.id} productInfo={info} productPage={true} />
@@ -51,7 +50,6 @@ export default function Products(props) {
       });
     } else if (orderedProducts === "alphabetical (z-a)") {
       const ordered = sortProductAlphabetical(productInfo);
-      console.log(ordered);
       return ordered.map((info) => {
         return (
           <ProductCard key={info.id} productInfo={info} productPage={true} />
@@ -87,7 +85,6 @@ export default function Products(props) {
         json.forEach((item) => {
           item.quantity = 1;
         });
-        console.log(json);
         setProductInfo(json);
       });
   }, [orderedProducts]);

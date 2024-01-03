@@ -34,8 +34,6 @@ export default function MyCart(props) {
 
   return (
     <div className="mycart-page-container">
-      {/* {console.log(shippingCost)} */}
-
       <div className="total-cost">
         {totalPrice > 1
           ? `Your current total is: $${totalPrice.toFixed(2)}`
@@ -45,7 +43,6 @@ export default function MyCart(props) {
       </div>
       <div className="cards-wrapper">
         {yourCart.map((cartproduct, index) => {
-          console.log(index);
           return (
             <ProductCard
               key={cartproduct.id}
