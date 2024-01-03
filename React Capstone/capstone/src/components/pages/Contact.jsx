@@ -16,22 +16,6 @@ export default function Contact(props) {
     }
   }, [firstName, lastName, email, message]);
 
-  // function handleSubmitButton() {
-  //   if (firstName && lastName && email && message) {
-  //     setShowMessage(true);
-  //     setSubmitMessage("Your message has been sent");
-
-  //     setShowModal(true);
-
-  //     setFirstName("");
-  //     setLastName("");
-  //     setEmail("");
-  //     setMessage("");
-  //   } else {
-  //     setShowModal("You are missing at least one of the required fields");
-  //   }
-  // }
-
   function handleSubmitButton() {
     setShowMessage(true);
     setSubmitMessage("Your message has been sent");
